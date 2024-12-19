@@ -2,14 +2,17 @@ package com.example.myapplication.callingapi.repository
 
 import com.example.myapplication.callingapi.api.ApiService
 import com.example.myapplication.callingapi.data.TestResponse
+import io.reactivex.Observable
 import io.reactivex.Single
 import javax.inject.Inject
 
 class TestRepository @Inject constructor(private val apiService: ApiService) {
 
-    fun getTest(): Single<TestResponse> {
+    fun getTest(): Observable<TestResponse> {
         return apiService.getTest()
-            .doOnSuccess { response ->
+//            .doOnSuccess { response ->
+            .doOnNext { response ->
+
                 // Add any additional processing or logging if needed
             }
             .doOnError { throwable ->
