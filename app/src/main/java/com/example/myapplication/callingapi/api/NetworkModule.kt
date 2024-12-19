@@ -12,6 +12,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
+import timber.log.Timber
 import javax.inject.Singleton
 
 @Module
@@ -28,11 +29,21 @@ object NetworkModule {
         .addInterceptor(loggingInterceptor) // Add the logging interceptor
         .build()
 
+//    @Provides
+//    @Singleton
+//    fun provideLoggingInterceptor(): HttpLoggingInterceptor {
+//        return HttpLoggingInterceptor().apply {
+//            level = HttpLoggingInterceptor.Level.BODY // Choose desired logging level
+//        }
+//    }
+
     @Provides
     @Singleton
     fun provideLoggingInterceptor(): HttpLoggingInterceptor {
-        return HttpLoggingInterceptor().apply {
-            level = HttpLoggingInterceptor.Level.BODY // Choose desired logging level
+        return HttpLoggingInterceptor { message ->
+            Timber.tag("OkHttp").d(message) // Log with Timber
+        }.apply {
+            level = HttpLoggingInterceptor.Level.BODY // Set desired logging level
         }
     }
 

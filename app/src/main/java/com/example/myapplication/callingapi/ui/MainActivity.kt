@@ -11,6 +11,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
+import timber.log.Timber
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity() {
                 .subscribe(
                     { response ->
                         // Update the UI with the response
+                        Timber.d("Fetching data for userId: ${response[2].title}")
                         binding.txtView.text = response[0].id.toString()
                     },
                     { throwable ->

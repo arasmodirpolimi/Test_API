@@ -23,6 +23,7 @@ hiltWork = "1.2.0"
 rxjavaVr = "2.2.21"
 rxandroidVr = "2.1.1"
 adapterRxjava2Vr = "2.9.0"
+timberVr = "5.0.1"
 
 
 [libraries]
@@ -52,6 +53,7 @@ workmanager = { group = "androidx.work", name = "work-runtime-ktx", version.ref 
 rxjava = { group = "io.reactivex.rxjava2", name = "rxjava", version.ref = "rxjavaVr" }
 rxandroid = { group = "io.reactivex.rxjava2", name = "rxandroid", version.ref = "rxandroidVr" }
 adapterRxjava2 = { group = "com.squareup.retrofit2", name = "adapter-rxjava2", version.ref = "adapterRxjava2Vr" }
+timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timberVr" }
 
 
 [plugins]

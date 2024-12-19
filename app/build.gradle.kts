@@ -36,6 +36,10 @@ android {
         jvmTarget = "1.8"
     }
 
+    buildFeatures {
+        buildConfig = true // Ensure this is enabled
+    }
+
     viewBinding {
         enable = true
     }
@@ -82,5 +86,8 @@ dependencies {
     implementation(libs.rxjava)
     implementation(libs.rxandroid)
     implementation(libs.adapterRxjava2)
+
+    // Timber JakeWharton Library
+    implementation(libs.timber)
 
 }
