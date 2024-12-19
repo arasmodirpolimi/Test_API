@@ -77,4 +77,10 @@ dependencies {
 
     // Work Manager Library
     implementation(libs.workmanager)
+
+    // RXJAVA2 Android
+    implementation(libs.rxjava)
+    implementation(libs.rxandroid)
+    implementation(libs.adapterRxjava2)
+
 }
