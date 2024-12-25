@@ -24,6 +24,7 @@ rxjavaVr = "2.2.21"
 rxandroidVr = "2.1.1"
 adapterRxjava2Vr = "2.9.0"
 timberVr = "5.0.1"
+recyclerviewVr = "1.3.2"
 
 
 [libraries]
@@ -54,6 +55,7 @@ rxjava = { group = "io.reactivex.rxjava2", name = "rxjava", version.ref = "rxjav
 rxandroid = { group = "io.reactivex.rxjava2", name = "rxandroid", version.ref = "rxandroidVr" }
 adapterRxjava2 = { group = "com.squareup.retrofit2", name = "adapter-rxjava2", version.ref = "adapterRxjava2Vr" }
 timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timberVr" }
+recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerviewVr" }
 
 
 [plugins]

@@ -7,7 +7,10 @@ import retrofit2.Response
 import retrofit2.http.GET
 
 interface ApiService {
+//    @GET("/posts")
+//    fun getTest(): Observable<TestResponse>
+////    suspend fun getTest(): Single<TestResponse>
+
     @GET("/posts")
-    fun getTest(): Observable<TestResponse>
-//    suspend fun getTest(): Single<TestResponse>
+    suspend fun getTest(): Response<TestResponse>
 }

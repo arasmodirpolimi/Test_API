@@ -90,4 +90,6 @@ dependencies {
     // Timber JakeWharton Library
     implementation(libs.timber)
 
+    // RecyclerView Library
+    implementation(libs.recyclerview)
 }
